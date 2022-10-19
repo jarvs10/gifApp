@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
-import { GifGrid } from './components/GifGrid';
+import { AddCategory, GifGrid } from './components';
 
 export const GifApp = () => {
 
-  const [categories, setCategories] = useState(['Bleach', 'Death Note']);
+  const [categories, setCategories] = useState([]);
 
   const onAddCategory = (value) => {
     if(categories.includes(value)){
@@ -20,7 +19,7 @@ export const GifApp = () => {
   return (
     <>
       {/* title */}
-      <h1>GifExportApp</h1>
+      <h1>Buscador de Gifs</h1>
 
       {/* Agrega una categoria desde el input */}
       <AddCategory addCategory={onAddCategory} />
